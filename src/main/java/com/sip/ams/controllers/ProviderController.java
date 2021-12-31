@@ -155,7 +155,7 @@ public class ProviderController {
 	public Provider getProvider(@PathVariable Long providerId) {
 
 		Optional<Provider> p = providerRepository.findById(providerId);
-
+		//System.out.println(p);
 		return p.get();
 
 	}
