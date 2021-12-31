@@ -21,16 +21,29 @@ public class Provider {
 	@NotBlank(message = "Email is mandatory")
 	@Column(name = "email")
 	private String email;
+	@Column(name = "nomImage")
+	private String nomImage;
+
 
 	public Provider() {
 	}
 
-	public Provider(String name, String address, String email) {
+	public Provider(String name, String address, String email, String nomImage) {
 		this.name = name;
 		this.address = address;
 		this.email = email;
+		this.nomImage = nomImage;
+
 	}
 
+	public String getNomImage() {
+		return nomImage;
+	}
+
+	public void setNomImage(String nomImage) {
+		this.nomImage = nomImage;
+	}
+	
 	public void setId(long id) {
 		this.id = id;
 	}
